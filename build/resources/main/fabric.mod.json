@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "fishonautotip",
+  "version": "1.0.1+26.1.2",
+  "name": "FishOnAutotip",
+  "description": "Client-side quality-of-life mod for tipping on FishOnMC (community 26.1.2 port)",
+  "authors": [
+    "Kimberlyow"
+  ],
+  "contributors": [
+    "Community compatibility port"
+  ],
+  "contact": {
+    "github": "https://github.com/Kimberlyow/FishOnAutotip",
+    "sources": "https://github.com/Kimberlyow/FishOnAutotip"
+  },
+  "license": "GPL-3.0",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.github.kimberlyow.fishonautotip.client.FishOnAutotipClient"
+    ],
+    "modmenu": [
+      "com.github.kimberlyow.fishonautotip.compat.ModmenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "cloth-config": ">=26.1.154",
+    "modmenu": ">=18.0.2",
+    "minecraft": "~26.1.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
