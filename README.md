@@ -1,46 +1,42 @@
-# FishOnAutotip — Minecraft 26.1.2 community port (source)
+# FishOnAutotip
 
-Based on [Kimberlyow/FishOnAutotip](https://github.com/Kimberlyow/FishOnAutotip) (GPL-3.0).
+![Minecraft Version](https://img.shields.io/badge/Minecraft-26.1.2-dc142c)
+![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-b22121)
+![Mod Loader](https://img.shields.io/badge/Mod%20Loader-Fabric-ff1482)
 
-Preserves the original client-side automatic tipping behavior and the Cloth Config / Mod Menu settings screen.
-The six default tip amounts are unchanged. **This port has not been compiled or tested against the game** in the preparation environment; API changes may still require Java source adjustments.
+Quality of Life Client-side Mod for FishOnMC.
 
-## Build on macOS
+Automatically tip other players for certain activities, with customizable tip amounts.
 
-1. Install/use **JDK 25** (`java -version` should show 25).
-2. Open Terminal inside this directory.
-3. Run:
+## Features
 
-   ```sh
-   chmod +x gradlew
-   ./gradlew clean build
-   ```
+- Automatically tip players who place Chummers
+- Automatically tip Reaction Winners
+- Customizable tipping amounts for each Chummer rarity and Reaction Winners
+- Set individual tip amounts below $100 to disable them
 
-4. If successful, use `build/libs/fishonautotip-1.0.1+26.1.2.jar` (not `-sources.jar`).
+## Installation
 
-## Build launcher notes
+1. [**Download FishOnAutotip for Minecraft 26.1.2**](https://github.com/awsomedevdan/FishOnAutotip/raw/refs/heads/main/build/libs/fishonautotip-1.0.1%2B26.1.2.jar).
+2. Install Fabric API and Mod Menu.
+3. Place the downloaded `.jar` in your Minecraft `mods` folder.
+4. Configure tipping amounts through Mod Menu.
 
-`gradlew` is a self-contained **shell bootstrap script** that downloads the Gradle 9.5.1 distribution
-if it is not already cached. This is a functional substitute for the official Gradle wrapper JAR,
-which could not be transferred into this ZIP. The `gradle/wrapper/gradle-wrapper.properties`
-file records the distribution URL. On Windows, use the included `gradlew.bat` bootstrap.
+Cloth Config is bundled with the mod.
 
-You will need internet access for the initial Gradle and Minecraft / Fabric dependency downloads.
+Alternatively, download the source code and build it yourself using Gradle.
 
-## Dependencies
 
-- Minecraft 26.1.2 / Fabric Loader 0.19.5
-- Fabric API 0.155.3+26.1.2
-- Cloth Config 26.1.154 (bundled via jar-in-jar)
-- Mod Menu 18.0.2 (separate installation)
-- JDK 25 to build
+## Credits
 
-## Original source note
+Originally developed by [Kimberlyow](https://github.com/Kimberlyow/FishOnAutotip).
 
-This reconstruction includes the original mod behavior and three Java classes, plus the original-style
-translation resource and GPL license. The original PNG icon is omitted (it is not essential to build).
-Preserves the original project's authorship attribution. Do not replace the author's official downloads with this untested build.
+Updated for Minecraft 26.1.2.
 
-## 26.1.2 config screen fix
+## License
 
-Uses `AutoConfigClient.getConfigScreen(...)` instead of the removed `AutoConfig.getConfigScreen(...)` API in Cloth Config 26.1. This port has not yet been compiled/tested in this environment.
+GPL-3.0
+
+## Disclaimer
+
+This project is not affiliated with Mojang, Microsoft, or the FishOnMC server.
